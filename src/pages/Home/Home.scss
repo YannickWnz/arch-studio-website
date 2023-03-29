@@ -1,0 +1,322 @@
+@import '/src/Utilities/utilities';
+
+.home {
+    width: 100%;
+    min-height: 1000px;
+    margin-top:50px ;
+    
+    .home-container {
+        width: 100%;
+        max-width: 1340px;
+        min-height: inherit;
+        margin: auto;
+        position: relative;
+
+        h2.vertical-intro {
+            position: absolute;
+            left: -26px;
+            writing-mode: vertical-lr;
+            color: $light-grey;
+            font-weight: normal;
+            font-size: 1.2em;
+            letter-spacing: 20px;
+        }
+        
+        .home-contents-wrapper {
+            width: 100%;
+            max-width: 85%;
+            min-height: inherit;
+            margin: auto;
+
+            .home-slides-wrapper {
+                width: 100%;
+                height: 750px;
+                position: relative !important;
+
+                .slide {
+                    width: 100%;
+                    height: inherit;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: none;
+                }
+                
+                .background-img-properties {
+                    background-blend-mode: overlay;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    align-items: center;
+                }
+                
+                .slide.active {
+                    @extend .background-img-properties;
+                    display: flex !important;
+                }
+
+                .slide-text-container {
+                    width: 100%;
+                    max-width: 600px;
+                    margin-left: 200px;
+                    
+                    h1 {
+                        color: white;
+                        font-size: 5em;
+                    }
+                    
+                    p {
+                        color: white;
+                        font-size: 1.1em;
+                        line-height: 1.2;
+                        max-width: 450px;
+                        margin-top: -30px;
+                    }
+                    
+                    .btn-wrapper {
+                        display: inline-block;
+                        background-color: $very-dark-blue;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px 0;
+                        max-width: 250px;
+                        cursor: pointer;
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-weight: bold;
+                            font-size: 1.1em;
+                        }
+
+                        i {
+                            color: white;
+                            font-size: 1.5em;
+                            margin-left: 15px;
+                        }
+
+                    }
+
+                }
+
+                .switching-btn-wrapper {
+                    width: 350px;
+                    height: 80px;
+                    position: absolute;
+                    bottom: 0;
+                    display: flex;
+                    left: -88px;
+
+                    & div {
+                        color: $medium-grey;
+                        width: calc(100% / 4);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: bold;
+                        font-size: 1.3em;
+                        background-color: white;
+                        cursor: pointer;
+                    }
+
+                    & div:hover {
+                        background-color: $very-light-grey;
+                    }
+
+                    & div.active {
+                        background: $very-dark-blue;
+                        color: white;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+// **************************** responsive styling START ****************************
+
+// large screen : 1201px START
+
+@media screen and (max-width: $large-screen) {
+    .home {
+
+        .home-container {
+            max-width: 1024px;
+            transition: all .5s ease-in-out;
+            
+                .home-contents-wrapper {
+                    
+                    .home-slides-wrapper {
+                        
+                        .slide-text-container {
+                            margin-left: 100px;
+                            transition: all .5s ease-in-out;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+// large screen : 1201px END
+
+// small screen : 1024px START
+@media screen and (max-width: $small-screen) {
+    .home {
+
+        .home-container {
+            transition: all .5s ease-in-out;
+
+            h2.vertical-intro {
+                left: 0;
+                display: none;
+            }
+            
+                .home-contents-wrapper {
+                    
+                    .home-slides-wrapper {
+                        
+                        .slide-text-container {
+                            margin-left: 50px;
+                            transition: all .5s ease-in-out;
+                        }
+
+                    .switching-btn-wrapper {
+                        display: none;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+// small screen : 1024px END
+
+// tablet screen : 768px START
+@media screen and (max-width: $tablet-screen) {
+    .home {
+        overflow-x: hidden;
+
+        .home-container {
+
+                .home-contents-wrapper {
+                    
+                    .home-slides-wrapper {
+                        
+                        .slide-text-container {
+                            margin: 0;
+                            padding: 40px;
+                                
+                                h1 {
+                                    font-size: 4em;
+                                    transition: all .5s ease-in-out;
+                                }
+                        }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+// mobile screen : 480px END
+@media screen and (max-width: $mobile-device) {
+    .home {
+
+        .home-container {
+            max-width: 100%;
+            transition: all .5s ease-in-out;
+            margin: 0;
+            
+            .home-contents-wrapper {
+                max-width: 100%;
+                transition: all .5s ease-in-out;
+                    
+                    .home-slides-wrapper {
+                        width: 100%;
+                        max-width: 100%;
+                        height: 600px;
+                        transition: all .5s ease-in-out;
+
+                        .slide {
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                        
+                        .slide-text-container {
+                            // border: 1px solid olivedrab;
+
+                            h1 {
+                                font-size: 2.8em;
+                                max-width: 200px;
+                                transition: all .5s ease-in-out;
+                            }
+
+                            p {
+                                font-size: 1.1em;
+                                max-width: 200px;
+                                margin-top: -10px;
+                            }
+
+                            .btn-wrapper {
+                                padding: 16px 0;
+                                transition: all .5s ease-in-out;
+                            }
+                        }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+// small mobile screen : 320px END
+@media screen and (max-width: $small-mobile-device) {
+    .home {
+
+        .home-container {
+            
+            .home-contents-wrapper {
+                    
+                    .home-slides-wrapper {
+                        
+                        .slide-text-container {
+
+                            h1 {
+                                // font-size: 2em;
+                                transition: all .5s ease-in-out;
+                            }
+
+                            p {
+                                font-size: 1em;
+                                max-width: 200px;
+                                // border: 1px solid red;
+                            }
+                        }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+// small mobile screen : 320px END
