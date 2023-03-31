@@ -5,9 +5,6 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function Navbar({change_menu_function, menu_state}) {
     return (
-
-
-
         <div id='navbar'>
             <div className='navbar-container'>
                 <div className='navbar-contents-wrapper'>
