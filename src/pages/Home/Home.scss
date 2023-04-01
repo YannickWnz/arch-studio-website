@@ -68,13 +68,7 @@
         position: relative;
 
         h2.vertical-intro {
-            position: absolute;
-            left: -26px;
-            writing-mode: vertical-lr;
-            color: $light-grey;
-            font-weight: normal;
-            font-size: 1.2em;
-            letter-spacing: 20px;
+            @extend %vertical-intro-style;
         }
         
         .home-contents-wrapper {
