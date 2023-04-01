@@ -1,0 +1,219 @@
+@import '/src/Utilities/utilities';
+
+.portfolio {
+    width: 100%;
+    min-height: 600px;
+    margin-top: 50px;
+
+    &-container {
+        width: 100%;
+        max-width: 1340px;
+        min-height: inherit;
+        margin: auto;
+        position: relative;
+
+        h2.vertical-intro {
+            @extend %vertical-intro-style
+        }
+
+        .portfolio-contents-wrapper {
+            width: 100%;
+            max-width: 85%;
+            min-height: inherit;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 40px;
+            grid-row-gap: 40px;
+            
+            .content {
+                @extend %bg-img-properties;
+                height: 550px;
+                padding-left: 40px;
+                padding-bottom: 40px;
+                position: relative;
+
+                .project-details {
+                    width: 100%;
+                    height: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    color: white;
+                    position: absolute;
+                    
+                    h1 {
+                        font-size: 1.8em;
+                        z-index: 3;
+                    }
+
+                    P {
+                        z-index: 3;
+                        margin-top: -15px;
+                    }
+                }
+
+                .hover-wrapper {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: black;
+                    opacity: .2;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                }
+
+                .hover-wrapper:hover {
+                    z-index: 3;
+                    background-color: white;
+                    opacity: .2;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+                }
+
+
+            }
+
+            .content:nth-child(1) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-seraph.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(2) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-eebox.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(3) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-federal.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(4) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-del-sol.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(5) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-prototype.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(6) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-228b.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(7) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-edelweiss.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(8) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-netcry.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(9) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-hypers.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(10) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-sxiv.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(11) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-trinity.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+            .content:nth-child(12) {
+                background-image: url('../../../public/assets/portfolio/desktop/image-paramour.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            }
+
+        }
+
+    }
+
+}
+
+// large screen 1201px START
+@media screen and (max-width: $large-screen) {
+    .portfolio {
+
+        &-container {
+            max-width: 1024px;
+            transition: all .5s ease-in-out;
+
+            .portfolio-contents-wrapper {
+                grid-template-columns: repeat(2, 1fr);
+                transition: all .5s ease-in-out;
+            }
+        }
+
+    }
+}
+// large screen 1201px END
+
+// small screen 1024 START
+@media screen and (max-width: $small-screen) {
+    .portfolio {
+
+        &-container {
+    
+            h2.vertical-intro {
+                left: 0;
+                display: none;
+            }
+    
+        }
+    
+    }
+}
+// small screen 1024 END
+
+// tablet screen 768 START
+@media screen and (max-width: $tablet-screen) {
+    .portfolio {
+
+        &-container {
+    
+            h2.vertical-intro {
+                left: 0;
+                display: none;
+            }
+    
+            .portfolio-contents-wrapper {
+                grid-template-columns: repeat(1, 1fr);
+                transition: all .5s ease-in-out;
+
+                .content {
+                    padding-left: 0;
+
+                    .project-details {
+
+                        h1, p {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+
+            }
+    
+        }
+    
+    }
+}
+// tablet screen 768 END
+
+// mobile screen 481px START
+@media screen and (max-width: $mobile-device) {
+    .portfolio {
+
+        &-container {
+            max-width: 100%;
+            transition: all .5s ease-in-out;
+            
+            .portfolio-contents-wrapper {
+                transition: all .5s ease-in-out;
+
+                .content {
+                    height: 350px;
+                    padding-left: 0;
+
+                    .project-details {
+
+                        h1, p {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
+// mobile screen 481px END
