@@ -18,6 +18,28 @@ $large-screen: 1201px;
 $small-screen: 1025px;
 $tablet-screen: 769px;
 $mobile-device: 481px;
-$small-mobile-device: 320px
+$small-mobile-device: 320px;
 
+
+%vertical-intro-style {
+    position: absolute;
+    left: -26px;
+    writing-mode: vertical-lr;
+    color: $light-grey;
+    font-weight: normal;
+    font-size: 1.2em;
+    letter-spacing: 20px;
+}
+
+%centered-flex-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%bg-img-properties {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
