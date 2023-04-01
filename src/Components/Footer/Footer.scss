@@ -1,5 +1,8 @@
 @import '/src/Utilities/utilities';
 
+a.active {
+    color: $very-dark-blue;
+}
 
 .footer {
     width: 100%;
@@ -58,7 +61,11 @@
                             font-weight: $semi-bold;
                             font-size: 1.2em;
                         }
-                        
+
+                        a.active {
+                            color: $very-dark-blue;
+                        }
+                                                
                         a:hover {
                             color: $very-dark-blue;
                         }

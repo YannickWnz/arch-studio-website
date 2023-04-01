@@ -1,5 +1,5 @@
 import './Footer.scss'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -11,13 +11,13 @@ function Footer() {
                     </div>
                     <div className='footer-links'>
                         <ul className='footer-ul-links'>
-                            <li className='footer-list'><Link to='/portfolio' >Portfolio</Link></li>
-                            <li className='footer-list'><Link to='/about' >About Us</Link></li>
-                            <li className='footer-list'><Link to='/contact' >Contact</Link></li>
+                            <li className='footer-list'><NavLink to='/portfolio' >Portfolio</NavLink></li>
+                            <li className='footer-list'><NavLink to='/about' >About Us</NavLink></li>
+                            <li className='footer-list'><NavLink to='/contact' >Contact</NavLink></li>
                         </ul>
                     </div>
                     {/* <Link className=''></Link> */}
-                    <Link className='footer-btn' to='/portfolio'>See Our Portfolio <i className="fa-solid fa-arrow-right"></i></Link>
+                    <NavLink className='footer-btn' to='/portfolio'>See Our Portfolio <i className="fa-solid fa-arrow-right"></i></NavLink>
                 </div>
             </div>
         </div>
