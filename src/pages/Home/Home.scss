@@ -128,6 +128,10 @@
                         margin-top: -30px;
                     }
 
+                    .btn {
+                        width: 200px;
+                    }
+
                 }
 
                 .switching-btn-wrapper {
@@ -254,6 +258,11 @@
                         margin-top: -50px;
                         max-width: 200px;
                     }
+
+                    .btn {
+                        width: 140px;
+                    }
+
                 }
 
             }
@@ -498,8 +507,6 @@
                                 .contents-wrapper {
                                     max-width: 100%;
                                     transition: all .5s ease-in-out;
-                                    // border: 2px solid darkgreen;
-                                    // margin-top: 60px;
 
                                     h2 {
                                         max-width: 50%;
@@ -608,7 +615,6 @@
                     .welcome {
                         height: 450px;
                         transition: all .5s ease-in-out;
-                        // border: blue 3px solid;
                         margin-bottom: 10px;
 
                         .welcome-contents {
@@ -724,6 +730,15 @@
                             .btn-wrapper {
                                 padding: 16px 0;
                                 transition: all .5s ease-in-out;
+                            }
+
+                            .btn {
+                                font-size: 1em;
+                                width: 160px;
+
+                                i {
+                                    font-size: 1.1em;
+                                }
                             }
                         }
 

@@ -50,10 +50,12 @@ function Home() {
               <div className='slide-text-container'>
                 <h1>{slide.title}</h1>
                 <p>{slide.Description}</p>
-                <div className='btn-wrapper'>
+                {/* <div className='btn-wrapper'>
                   <Link>See our portfolio </Link>
                   <i className="fa-solid fa-arrow-right"></i>
-                </div>
+                </div> */}
+                <Link className='btn' to='/portfolio'>See our portfolio<i className="fa-solid fa-arrow-right"></i></Link>
+
               </div>
             </div>
             })}
@@ -86,10 +88,12 @@ function Home() {
           <section className='home-about'>
             <div className="home-about-container">
               <h1>Small teams, big ideas</h1>
-              <div className='btn-wrapper'>
+              {/* <div className='btn-wrapper'>
                 <Link to='/about'>About us</Link>
                 <i className="fa-solid fa-arrow-right"></i>
-              </div>
+              </div> */}
+                <Link className='btn' to='/about'>About us<i className="fa-solid fa-arrow-right"></i></Link>
+
             </div>
           </section>
           {/* small team big ideas section END */}
@@ -101,42 +105,33 @@ function Home() {
                 <Link className='btn' to='/portfolio'>See all <i className="fa-solid fa-arrow-right"></i></Link>
               </div>
               <div className='projects'>
-                {/* <Link> */}
                   <div className='project-wrapper'>
                     <div className='number'>
                       <h1>1</h1>
                     </div>
                     <div className='details'>
                       <p>Project Del Sol</p>
-                      {/* <p>View all projects</p> */}
                       <Link to='/portfolio'>View all projects</Link>
                     </div>
                   </div>
-                {/* </Link> */}
-                {/* <Link> */}
                 <div className='project-wrapper'>
                   <div className='number'>
                     <h1>2</h1>
                   </div>
                   <div className='details'>
                     <p>228b Tower</p>
-                    {/* <p>View all projects</p> */}
                     <Link to='/portfolio'>View all projects</Link>
                   </div>
                 </div>
-                {/* </Link> */}
-                {/* <Link> */}
                 <div className='project-wrapper'>
                   <div className='number'>
                     <h1>3</h1>
                   </div>
                   <div className='details'>
                     <p>Le Prototype</p>
-                    {/* <p>View all projects</p> */}
                     <Link to='/portfolio'>View all projects</Link>
                   </div>
                 </div>
-                {/* </Link> */}
               </div>
 
               <Link className='btn see-more-portfolio' to='/portfolio'>See all <i className="fa-solid fa-arrow-right"></i></Link>
