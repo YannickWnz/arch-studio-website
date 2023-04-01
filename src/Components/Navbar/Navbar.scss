@@ -43,6 +43,16 @@
                         font-weight: $semi-bold;
                         font-size: 1.2em;
                     }
+
+                    a.active {
+                        color: $very-dark-blue;
+                    }
+
+                    a:hover {
+                        transition: all .3s ease-in-out;
+                        color: $very-dark-blue;
+                    }
+
                 }
             }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.scss'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 
 function Navbar({change_menu_function, menu_state}) {
@@ -9,13 +9,13 @@ function Navbar({change_menu_function, menu_state}) {
             <div className='navbar-container'>
                 <div className='navbar-contents-wrapper'>
                     <div className='logo'>
-                        <Link to='/' ><img src='/assets/logo.svg' /></Link>
+                        <NavLink to='/' ><img src='/assets/logo.svg' /></NavLink>
                     </div>
                     <div className='navbar-links-wrapper'>
                         <ul className={`nav-links ${menu_state ? 'show-menu' : ''}`}>
-                            <li className='nav-list'><Link to='/portfolio' >Portfolio</Link></li>
-                            <li className='nav-list'><Link to='/about' >About Us</Link></li>
-                            <li className='nav-list'><Link to='/contact' >Contact</Link></li>
+                            <li className='nav-list'><NavLink to='/portfolio' >Portfolio</NavLink></li>
+                            <li className='nav-list'><NavLink to='/about' >About Us</NavLink></li>
+                            <li className='nav-list'><NavLink to='/contact' >Contact</NavLink></li>
                         </ul>
                     </div>
                     <i className="fa-solid fa-bars" onClick={change_menu_function}></i>
