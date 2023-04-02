@@ -1,0 +1,201 @@
+@import '/src/Utilities/utilities';
+
+
+.contact {
+    width: 100%;
+    min-height: 1000px;
+    margin-top: 50px;
+
+    &-container {
+        width: 100%;
+        max-width: 1340px;
+        margin: 150px auto;
+        min-height: 200px;
+
+        .contact-contents-wrapper {
+            width: 100%;
+            max-width: 85%;
+            min-height: inherit;
+            margin: auto;
+            position: relative;
+
+            .contact-details {
+                display: flex;
+                margin: 50px 0 120px;
+                min-height: inherit;
+                justify-content: space-between;
+
+                hr {
+                    @extend %hr-properties;
+                    top: 0;
+                    margin-top: 0;
+                }
+
+                .contact-intro {
+                    width: 300px;
+
+                    h1 {
+                        font-size: 4em;
+                        max-width: 300px;
+                        margin-top: 60px;
+                    }
+                }
+
+                .offices {
+                    width: 60%;
+                    min-height: inherit;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    h3 {
+                        color: $dark-grey;
+                        font-weight: semi-bold;
+                    }
+
+                    p {
+                        font-size: 1.1em;
+                        color: $dark-grey;
+                        font-weight: semi-bold;
+                        margin-bottom: -10px;
+                    }
+
+                }
+
+            }
+
+            .map {
+                @extend %bg-img-properties;
+                width: 100%;
+                height: 500px;
+                margin: 0 0 120px;
+                background-image: url('../../../public/assets/contact/desktop/image-map.png');
+            }
+
+            .connect {
+                width: 100%;
+                min-height: 200px;
+                display: flex;
+                justify-content: space-between;
+
+                h1 {
+                    font-size: 4em;
+                    max-width: 300px;
+                }
+
+                .form-container {
+                    width: 60%;
+                    height: 300px;
+
+                    form {
+                        width: 100%;
+                        height: inherit;
+                        margin-top: 20px;
+
+                        input, textarea {
+                            box-sizing: border-box;
+                            border: 0;
+                            border-bottom: 1px solid $very-dark-blue;
+                            font-size: 1.5em;
+                            font-weight: bold;
+                            padding: 20px 10px;
+                            outline: none;
+                            cursor: pointer;
+                            resize: none;
+                        }
+                        
+                        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                            color: $light-grey;
+                        }
+                        textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                            font-family: 'League Spartan', sans-serif;
+                        }
+                        
+                        input[type="text"] {
+                            width: 100%;
+                            max-width: 100%;
+                            margin-bottom: 20px;
+                        }
+                        
+                        input[type="email"] {
+                            width: 100%;
+                            max-width: 100%;
+                            margin-bottom: 20px;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            max-width: 100%;
+                            height: 120px;
+                        }
+
+                        .contact-btn {
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            margin-top:-5px ;
+
+                            button {
+                                padding: 20px;
+                                background-color: $very-dark-blue;
+                                border: none;
+                                outline: none;
+                                cursor: pointer;
+
+                                i {
+                                    color: white;
+                                    font-size: 2em;
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                }
+                
+            }
+        }
+
+    }
+
+}
+
+
+.disabled {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .disabled {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        background-color: $very-dark-blue;
+        padding: 0 10px;
+        z-index: 10;
+        text-align: center;
+
+        p {
+            max-width: 250px;
+            line-height: 1.2;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        a {
+            font-size: 3em;
+            color: white;
+        }
+
+    }
+}
