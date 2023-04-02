@@ -6,6 +6,7 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Contact from './pages/Contact/Contact';
 import Navbar from './Components/Navbar/Navbar';
 import AboutUs from './pages/About-Us/AboutUs';
+import Footer from './Components/Footer/Footer';
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
       </Routes>
 
+        <Footer />
     </Router>
     </div>
   );
