@@ -43,3 +43,15 @@ $small-mobile-device: 320px;
     background-size: cover;
 }
 
+%hr-properties {
+    width: 60px;
+    height: 1px;
+    background-color: $light-grey;
+    position: absolute;
+    border: 0;
+}
+
+%large-intro-text-properties {
+    
+}
+
