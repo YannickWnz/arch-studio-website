@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import HeroSection from '../../Components/HeroSection/HeroSection'
 import './AboutUs.scss'
 
@@ -86,6 +87,10 @@ function AboutUs() {
               </div>
               
             </div>
+          </section>
+          <section className='disabled'>
+            <p>This page is yet to be obtimized for small and mobile screen</p>
+            <Link to='/'>Go back home</Link>
           </section>
         </div>
       </div>
